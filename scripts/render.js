@@ -3,12 +3,6 @@ const selectedProductIds = [];
 
 const productsElement = document.getElementById("products");
 
-const productsModified = products.map(function (product) { //map will create a new set of data and alter the original data.
-    product.priceModified = product.price.toFixed(2); //toFixed will give a decimal point.
-    return product;
-})
-renderProductCards(products);
-
 
 function renderProductCards(products) {
     let productCards = "";
@@ -38,8 +32,8 @@ function renderProductCard(product) {
                 <button type="button" class="btn"><span class="material-icons-outlined">
                         add_shopping_cart
                     </span></button>
-                <button type="button" class="btn btn-favourite" data-id="${product.id}">
-                <span class="material-icons-outlined" data-id="${product.id}">
+                <button type="button" class="btn btn-favourite" data-id="${product._id}">
+                <span class="material-icons-outlined" data-id="${product._id}">
                         favorite_border
                     </span></button>
                 <button type="button" class="btn"><span class="material-icons-outlined">
